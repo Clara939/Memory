@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inscription</title>
+    <title>se connecter</title>
 </head>
 <body>
-    <h1>ENI - MEMORY - S'Inscrire</h1>
-
-     <nav >
+    <h1>ENI - MEMORY - connecter</h1>
+    <nav >
         <a href="index.html">Accueil</a>
 
         <a href="inscription.html">S'inscrire</a>
@@ -20,17 +19,10 @@
         <a href="jeux.html">Jouer</a>
 
     </nav>
-    <h2>Inscrivez-vous.</h2>
-<form action="#" method="post">
-    <fieldset>
-
-    <label for="utilisateur">Nom d'utilisateur :</label>
-            <input type="text" id="utilisateur" name="utilisateur" placeholder="3 caractères minimum"
-            pattern="[A-Za-z]{3,}" title="Saisissez votre nom d'utilisateur (3 caractères minimum.)">
-    
-        <br>
-
-     <label for="email">Entrez votre email :</label>
+    <h2>connectez-vous.</h2>
+    <form action="#" method="post" >
+        <fieldset>
+        <label for="email">Entrez votre email :</label>
         <input type="email" 
         id="email"
         name="email" placeholder="Votre mail"
@@ -47,23 +39,11 @@
 
         <br>
 
-        <label for="mdpComfirme">Comfirmez le mot de passe :</label>
-        <input type="password" 
-        id="mdpComfirme" 
-        name="mdpComfirme" 
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-        title="Confirmez le mot de passe">
-
-        <br>
-
-        <input type="submit" value="Création du compte">
+        <input type="submit" value="Se connecter">
         <br>
         <input type="reset" value="Annuler">
-    </fieldset>
-</form>
-
-
-
+      </fieldset>  
+    </form>
 
 </body>
 </html>

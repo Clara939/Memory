@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+body{
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: rgb(144, 169, 214);
+}
+/*la classe body est pour le block encadrer  */
+.body{
+/* il faut faire un encadrer et centrer l'encadrer  */
+}
+#memory-legume{
+width: 50%;
+/* Il faut centre l'image  */
+}
