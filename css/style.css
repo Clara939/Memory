@@ -1,15 +1,18 @@
 /* h1 = titre aligner */
-h1,h2 {
+h1,
+h2 {
     text-align: center;
 }
+
 /* body = changer la taille, la police et la couleur */
-body{
+body {
     font-size: 14px;
     font-family: sans-serif;
     background-color: rgba(54, 161, 152, 0.596);
 }
+
 /* nav = la barre de navigation entre les pages */
-nav{
+nav {
     margin: 2%;
     padding: 2%;
     border-radius: 20%;
@@ -18,21 +21,30 @@ nav{
     display: flex;
     justify-content: space-around;
 }
+
 /* encadrer = defini la couleur et les parametre des encadrer */
-.encadrer{
-     margin: 2%;
+.encadrer {
+    margin: 2%;
     padding: 2%;
     border-radius: 1%;
     border: 2%;
     background-color: rgba(208, 240, 195, 0.863);
 
 }
+
 /* modifie l'image sur la page d'acceuil */
-#memory-legume{
-width: 50%;
-/* a faire :  modifier l'emplacement de l'image */
+.image-accueil {
+    display: flex;
+    justify-content: center;
 }
+#memory-legume {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    /* a faire :  modifier l'emplacement de l'image */
+}
+
 /* centre le texte d'acceuill */
-.bonjour{
+.bonjour {
     text-align: center;
 }
