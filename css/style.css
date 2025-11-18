@@ -31,7 +31,11 @@ nav {
     background-color: rgba(208, 240, 195, 0.863);
 
 }
-
+/* 
+-----------------------------------------------------------------------------
+mise en page de l'acceuil
+-----------------------------------------------------------------------------
+*/
 /* modifie l'image sur la page d'acceuil */
 .image-accueil {
     display: flex;
@@ -47,4 +51,101 @@ nav {
 /* centre le texte d'acceuill */
 .bonjour {
     text-align: center;
+}
+
+/* 
+-----------------------------------------------------------------------------
+mise en page de Jeux
+-----------------------------------------------------------------------------
+*/
+/* configuration du plateau de jeux */
+.cartes{
+    width: 80px;
+    height: 80px;
+    background-color: #2f7425;
+    color: white;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 2%;
+    border: 2%;
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 80px;
+}
+/* alligne les cartes au centre */
+.plateau{
+    text-align: center;
+}
+
+/* 
+-----------------------------------------------------------------------------
+mise en page des formulaires
+-----------------------------------------------------------------------------
+*/
+/* taille et hauteur */
+input{
+   height: 20px;
+    width: 150px;
+    margin: 3px;
+    border: 1px solid black;
+}
+/* focus sur les input */
+input:focus {
+    border: 1px solid black;
+    outline-style: none;
+}
+/* effet sur input au survol */
+input:hover {
+    border: 2px solid black;
+}
+
+/* alignement texte  */
+label{
+    display: inline-block;
+    width: 200px;
+    color: black;
+    text-align: right;
+    margin-right: 5px;
+}
+/* contour formulaire */
+fieldset{
+    border-radius: 7px;
+    border: 1px solid black;
+}
+/* boutton parametrage */
+.btn{
+    line-height: 50px;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+/* reglage des select sur le profil */
+/* .select{ }*/
+    
+
+
+
+/* couleur boutton valider */
+#vert{
+    background-color: green;
+    color: white;
+    border:1px solid green;
+}
+/* couleur boutton annuler */
+#rouge{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+/* effet sur boutton au survol */
+#vert:hover{
+    background-color: rgb(1, 95, 1);
+    border: 2px solid silver;
+}
+/* effet sur boutton au survol */
+#rouge:hover{
+background-color: rgb(155, 50, 32);
+    border: 2px solid silver;
 }

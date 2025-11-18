@@ -1,0 +1,39 @@
+let compteurPomme = 0;
+let compteurBanane = 0;
+let compteurBrocoli = 0;
+let compteurCerise = 0;
+let compteurPiment = 0;
+let compteurFraise = 0;
+
+
+// init
+
+$(function () {
+ 
+    // Déclaration des variables, constantes, ...
+    let nbEssai = 0;
+    // Je commence simple sans choix de taille ni de thème...
+    // A complexifier plus tard
+    let match1 = '<img src="ressources/memory-legume/1.svg">';
+    // let match2 = '<img src="ressources/memory-legume/2.svg">';
+    // let match3 = '<img src="ressources/memory-legume/3.svg">';
+    // let match4 = '<img src="ressources/memory-legume/4.svg">';
+    // let match5 = '<img src="ressources/memory-legume/5.svg">';
+    // let match6 = '<img src="ressources/memory-legume/6.svg">';
+ 
+    // Jouer un essai
+    $(".carte").on("click", revelerCarte);
+ 
+ 
+ 
+    
+ 
+function revelerCarte() {
+    if ($(this).attr("class") === "carte") { // "carte" = face cachée
+        // Reveler la carte
+        $(this).html(match1);
+        console.log("Flip card")
+    }
+}
+ 
+})

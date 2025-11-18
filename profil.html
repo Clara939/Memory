@@ -22,8 +22,11 @@
 
     </nav>
 <h2>Profil</h2>
+
 <form action="#" method="post" >
+   <div class="encadrer">
     <fieldset>
+        
     <label for="utilisateur">Nom d'utilisateur :</label>
             <input type="text" id="utilisateur" name="utilisateur">
         <br>
@@ -31,7 +34,7 @@
         <input type="email"  id="email" name="email">
 
         <br>
-
+<div class="select">
     <label for="selectStyle">Choix du Memory : </label>
             <select name="selectStyle" id="selectStyle">
                 <option value="valeur1"selected>valeur 1</option>
@@ -42,18 +45,22 @@
             <br>
     <label for="selectSize">Taille du Memory : </label>
             <select name="selectSize" id="selectSize">
-                <option value="valeur1"selected>valeur 1</option>
-                <option value="valeur2" >valeur 2</option>
+                <option value="valeur1"selected>valeur 1 </option>
+                <option value="valeur2" >valeur 2 </option>
                 <option value="valeur3">valeur 3</option>
                 <option value="valeur4">valeur 4</option>
             </select>
             <br>
-    <input type="submit" value="Enregistrez Option">
-
+        </div>  
+    <div class="btn">
+    <input type="submit" id="vert" value="Enregistrez Option">
+    </div>
     <!--ajouter un tableau des resultat "dernier score"   -->
-    
+   
 </fieldset>
+ </div>
 </form>
+
 <script src="js/script.js"></script>
 </body>
 </html>

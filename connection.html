@@ -22,6 +22,7 @@
     </nav>
     <h2>connectez-vous.</h2>
     <form action="#" method="post" >
+        <div class="encadrer">
         <fieldset>
         <label for="email">Entrez votre email :</label>
         <input type="email" 
@@ -39,11 +40,13 @@
         title="Au moins un symbolle. un chiffre. ainsi que 8 caractère minimum.">
 
         <br>
-
-        <input type="submit" value="Se connecter">
+        <div class="btn">
+        <input type="submit" id="vert" value="Se connecter">
         <br>
-        <input type="reset" value="Annuler">
+        <input type="reset" id="rouge" value="Annuler">
+        </div>
       </fieldset>  
+      </div>
     </form>
     <script src="js/script.js"></script>
 </body>
