@@ -45,7 +45,6 @@ mise en page de l'acceuil
     width: 100%;
     height: auto;
     max-width: 600px;
-    /* a faire :  modifier l'emplacement de l'image */
 }
 
 /* centre le texte d'acceuill */
@@ -121,11 +120,6 @@ fieldset{
     display: flex;
     justify-content: space-between;
 }
-/* reglage des select sur le profil */
-/* .select{ }*/
-    
-
-
 
 /* couleur boutton valider */
 #vert{
@@ -148,4 +142,24 @@ fieldset{
 #rouge:hover{
 background-color: rgb(155, 50, 32);
     border: 2px solid silver;
+}
+/* 
+------------------------------------------------------------------------------
+mise en page profil
+------------------------------------------------------------------------------
+*/
+/* gere la taille et l'emplacement de la photo */
+#photoProfil {
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+    
+}
+.photoProfil {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    /* width: 60px; */
+    height: 60px;
 }
