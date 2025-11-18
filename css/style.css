@@ -95,7 +95,7 @@ input:focus {
 }
 /* effet sur input au survol */
 input:hover {
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 /* alignement texte  */
@@ -155,11 +155,15 @@ mise en page profil
     max-width: 40px;
     
 }
-.photoProfil {
+.rond {
     display: flex;
-    justify-content: center;
+
     background-color: black;
     border-radius: 50%;
-    /* width: 60px; */
-    height: 60px;
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 8px;
+    
 }
