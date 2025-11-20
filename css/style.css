@@ -200,13 +200,6 @@ mise en page profil
 */
 /* gere la taille et l'emplacement de la photo */
 #photoProfil {
-    width: 100%;
-    height: auto;
-    max-width: 40px;
-    
-}
-.rond {
-    display: flex;
 
     background-color: black;
     border-radius: 50%;
@@ -215,7 +208,12 @@ mise en page profil
     max-width: 40px;
     max-height: 40px;
     padding: 8px;
- 
+}
+.rond {  
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
 }
 .select{
 
