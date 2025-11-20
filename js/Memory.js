@@ -2,8 +2,10 @@
 // cartes
 const cartes = document.getElementsByClassName('cartes');
 
+// valeurs des cartes
 const valeursCartes = [1,2,3,4,5,6,1,2,3,4,5,6];
 
+// valeurs des cartes retournée
 let firstCard = null;
 let secondCard = null;
 
@@ -12,6 +14,13 @@ let valeursMelangees = [];
 
 // permet de bloquer le clique pendant le resetboard
 let boardLocked = false;
+
+// afficher message gagnant
+const bravo = document.getElementsByClassName('bravo')
+
+
+
+
 
 
 
@@ -24,10 +33,13 @@ export function initialisation() {
     //initialisation des cartes en affichant d'abord la face 
     cartesFace();
 
-    // initialisation des cartes avec espaces
+    // initialisation des cartes avec espaces et permet de relancer la partie
     document.addEventListener("keyup", (event) => {
-        if (event.key == " ") {
-            cartesInit(); }});
+    if (event.key == " ") {
+        relancerPartie();
+    }
+});
+
     
     // initialisation du click sur les cartes
      const cartes = document.getElementsByClassName("cartes");
@@ -112,7 +124,7 @@ function cartesInit(){
 
  // fonction pour initialiser le melange
 function shuffle(array) {
-    for (let i = cartes.length - 1; i > 0; i--) {
+    for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
@@ -136,7 +148,7 @@ function melangerCartes() {
 }
 
 
-// fonction qui permet de cliquer sur les cartes et qu'elle se retourne
+// fonction qui permet de cliquer sur les cartes et qu'elle se retourne + appele fonction a derouler pour voir
 function retourne(event){
     if (boardLocked) return; // si le plateau est verrouillé, ne rien faire
     
@@ -209,7 +221,7 @@ function verification(){
             // déverouille le plateau
             boardLocked = false;
 
-        }, 5000);// laisse un délai pour l'animation
+        }, 1000);// laisse un délai pour l'animation
     } else{
     // cartes identiques : on bloque définitivement ces cartes
     desactiveCarte();
@@ -250,9 +262,31 @@ function checkVictory() {
     }
 
     if (toutesTrouvees) {
-        alert("Félicitations ! Vous avez trouvé toutes les paires !");
-        
+    //    affiche texte bravo!!!
+    let titre = document.createElement('h2');
+      titre.innerHTML = "Bravo ! vous avez gagné !";
+            bravo[0].appendChild(titre);
+
     }
 }
 
-
+// fonction pour relancer une partie
+function relancerPartie(){
+    // enleve le message bravo
+    bravo[0].innerHTML = "";
+    // remet les variables a null
+    resetPlateau();
+    // débloque les cartes
+    boardLocked = false;
+    // enlève la class matched et réactive les cartes
+    for (const carte of cartes) {
+        carte.classList.remove('matched');
+        carte.innerHTML = ""; // vide complètement la carte
+        carte.addEventListener("click", retourne);
+    }
+    // mélange les cartes
+    melangerCartes();
+    
+    // remettre image ? 
+    cartesInit();
+}

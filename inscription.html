@@ -22,7 +22,7 @@
 
     </nav>
     <h2>Inscrivez-vous.</h2>
-<form action="#" method="post">
+<form action="#" method="post" class="formulaireInscription">
     <div class="encadrer">
     <fieldset>
 
@@ -41,26 +41,24 @@
         <br>
 
         <label for="mdp">Mot de passe :</label>
-        <input type="password" 
-        id="mdp" 
-        name="mdp" 
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-        title="Au moins un symbolle. un chiffre. ainsi que 8 caractère minimum.">
+        <input type="password" id="mdp" name="mdp"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Au moins un symbolle. un chiffre. ainsi que 8 caractère minimum.">
 
         <br>
 
         <label for="mdpComfirme">Comfirmez le mot de passe :</label>
-        <input type="password" 
-        id="mdpComfirme" 
-        name="mdpComfirme" 
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-        title="Confirmez le mot de passe">
+        <input type="password" id="mdpComfirme" name="mdpComfirme"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Confirmez le mot de passe">
 
+        <div id="progressionMdp">
+                <div id="barreMdp"></div>
+                <span id="force-mdp"></span>
+            </div>
+        
         <br>
         <div class="btn">
-        <input type="submit" id="vert" value="Création du compte">
+        <input type="submit" id="vert" value="Création du compte" disabled>
         <br>
         <input type="reset" id="rouge" value="Annuler">
+        </div>
         </div>
     </fieldset>
     </div>
