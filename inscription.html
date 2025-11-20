@@ -28,7 +28,7 @@
 
     <label for="utilisateur">Nom d'utilisateur :</label>
             <input type="text" id="utilisateur" name="utilisateur" placeholder="3 caractères minimum"
-            pattern="[A-Za-z]{3,}" title="Saisissez votre nom d'utilisateur (3 caractères minimum.)">
+            pattern="[A-Za-z]{3,}" title="Saisissez votre nom d'utilisateur (3 caractères minimum.)" autocomplete="off">
     
         <br>
 
@@ -36,7 +36,8 @@
         <input type="email" 
         id="email"
         name="email" placeholder="Votre mail"
-        title="Saisissez votre adresse email">
+        title="Saisissez votre adresse email"
+        autocomplete="off">
 
         <br>
 
@@ -64,8 +65,8 @@
     </div>
 </form>
 
-
-
+<script src="js/Memory.js"></script>
+<script src="js/formulaireInscription.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

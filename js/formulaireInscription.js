@@ -1,5 +1,7 @@
+window.onload = init;
 // fonction d'initialisation ---------------------------------------------------------
-export function init(){
+ function init(){
+    
 // controle du mot de passe
     document.getElementById('mdp').addEventListener('input', controleMotDePasse);
 // controle du nom utilisateur
@@ -41,18 +43,6 @@ let pointEmail = 0;
 const bouton = document.getElementById('vert'); 
 
 // -----------------------------------------------------------------------------------
-
-//méthode qui permet de mofidier la couleur d'un élément en fonction de son id
-function colorTextRed(id) {
-    document.getElementById(id).style.color = "red";
-}
-
-function colorTextGreen(id) {
-    document.getElementById(id).style.color = "green";
-}
-
-
-
 // fonction pour savoir si le nombre de caract requis est present ou non.
 function NomUtilisateur(){
     // récupère la saisie  du nom utilisateur
@@ -172,10 +162,8 @@ function verifMinuscule(mdp) {
 	
 	//si on trouve une minuscule on passe la consigne minuscule en vert
     if (presenceMinuscule) {
-        colorTextGreen('minuscule');
         pointMinuscule = 1;
     } else {
-        colorTextRed('minuscule');
         pointMinuscule = 0;
     }
 
@@ -192,10 +180,8 @@ function verifMajuscule(mdp) {
     }
 
     if (presenceMajuscule) {
-        colorTextGreen('majuscule');
         pointMajuscule = 1;
     } else {
-        colorTextRed('majuscule');
         pointMajuscule = 0;
     }
 
@@ -211,10 +197,8 @@ function verifChiffre(mdp) {
     }
 
     if (presenceChiffre) {
-        colorTextGreen('chiffre');
         pointChiffre = 1;
     } else {
-        colorTextRed('chiffre');
         pointChiffre = 0;
     }
    
@@ -222,21 +206,10 @@ function verifChiffre(mdp) {
 // fonction qui verif le nb de caractere du mdp
 function verifNbCaracteres(mdp) {
     let nbCaract = false;
-
-	//si le mot de passe est vidé je remets les consignes en rouge
-    if (mdp.length == 0) {
-        colorTextRed('minuscule');
-        colorTextRed('majuscule');
-        colorTextRed('chiffre');
-        colorTextRed('nbCaracteres');
-    }
-
 	//si le mot de passe fait + de 8 lettres je valide la consigne de longueur
     if (mdp.length >= 8) {
-        colorTextGreen('nbCaracteres');
         nbCaract = true;
     } else {
-        colorTextRed('nbCaracteres');
         nbCaract = false;
     }
 
@@ -247,19 +220,15 @@ function verifNbCaracteres(mdp) {
     }
 
 }
-
 // fonction qui verif les symboles
 function verifSymbole(mdp){
     let regex = /[!@#$%^&*(),.?":{}|<>]/;
     if(regex.test(mdp)){
-        colorTextGreen('symbole');
         pointSymbole = 1;
     } else {
-        colorTextRed('symbole');
         pointSymbole = 0;
     }
 }
-
 // fonction qui verifie la confirm mot de passe
 function verifConfirmationMotDePasse() {
     const mdp = document.getElementById('mdp').value;
@@ -273,7 +242,6 @@ function verifConfirmationMotDePasse() {
         mdpComfirme.classList.remove('valid');
     }
 }
-
 
 // ---------------------------------------------------------------------------------------
 // fonction pour la force du mot de passe pour afficher la barre de progresion
@@ -334,4 +302,18 @@ function enregistrerUtilisateur(username, email, password) {
     localStorage.setItem('utilisateurs', JSON.stringify(utilisateurs));
 
     alert("Inscription réussie !");
+
+    RedirectionVersPageConnection();
 }
+
+// --------------------------------------------------------------------------------------------------
+//  JS DE LA PAGE CONNECTER
+// --------------------------------------------------------------------------------------------------
+
+function RedirectionVersPageConnection(){
+    console.log("redirection");
+    
+    document.location.href="connection.html"; 
+}
+
+

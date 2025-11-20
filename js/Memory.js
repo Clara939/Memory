@@ -1,3 +1,4 @@
+window.onload = initialisation;
 // variables
 // cartes
 const cartes = document.getElementsByClassName('cartes');
@@ -25,7 +26,7 @@ const bravo = document.getElementsByClassName('bravo')
 
 
 // fonction génerale qui appel toutes les fonctions
-export function initialisation() {
+   function initialisation() {
     
     // mélanger les cartes
     melangerCartes();
@@ -142,9 +143,11 @@ function melangerCartes() {
 
     // réinsérer dans le DOM
     const plateau = document.getElementById("plateau");
-    plateau.innerHTML = "";
+    if(plateau!=null){
+        plateau.innerHTML = "";
 
-    cartesArray.forEach(carte => plateau.appendChild(carte));
+        cartesArray.forEach(carte => plateau.appendChild(carte));
+    }
 }
 
 

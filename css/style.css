@@ -9,6 +9,8 @@ body {
     font-size: 14px;
     font-family: sans-serif;
     background-color: rgba(54, 161, 152, 0.596);
+    
+   
 }
 
 /* nav = la barre de navigation entre les pages */
@@ -83,9 +85,10 @@ mise en page des formulaires
 */
 /* taille et hauteur */
 input {
-    width: 200px;
+    width: 220px;
     padding: 5px;
     box-sizing: border-box; /* évite que la bordure dépasse */
+    margin: 5px 0;
 }
 
 /* focus sur les input */
@@ -99,7 +102,7 @@ input:hover {
 }
 
 input.valid {
-    background-image: url('ressources/check.svg');
+    background-image: url('../ressources/check.svg');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 20px 20px;
@@ -138,11 +141,12 @@ fieldset{
 #progressionMdp {
     width: 100%;
     height: 8px;
-    background-color: lightgray;
+    background-color: white;
     margin: 10px 0 20px 0; /* espace au-dessus et en-dessous */
     border-radius: 2px;
     overflow: hidden;
     position: relative;
+    border: 1px solid black;
 }
 
 #barreMdp {
@@ -211,5 +215,8 @@ mise en page profil
     max-width: 40px;
     max-height: 40px;
     padding: 8px;
-    
+ 
+}
+.select{
+
 }
